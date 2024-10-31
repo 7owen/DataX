@@ -138,7 +138,7 @@ public  class HdfsHelper {
     public Path[] hdfsDirList(String dir,String fileName){
         Path path = new Path(dir);
         Path[] files = null;
-        String filterFileName = fileName + "__*";
+        String filterFileName = fileName + "_*";
         try {
             PathFilter pathFilter = new GlobFilter(filterFileName);
             FileStatus[] status = fileSystem.listStatus(path,pathFilter);
